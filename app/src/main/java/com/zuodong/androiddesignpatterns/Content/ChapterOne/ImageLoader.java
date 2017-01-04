@@ -19,19 +19,22 @@ import java.util.concurrent.Executors;
 
 public class ImageLoader {
 
-    ImageCache mImageChche = new ImageCache();
+    ImageCache mImageChche = new MemoryCache();
 
+    //线程池
     ExecutorService mExecutorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
 
     public void displayimage(final String url,final ImageView imageView){
 
+        //先从缓存中取
         Bitmap bitmap = mImageChche.get(url);
         if(bitmap != null){
             imageView.setImageBitmap(bitmap);
             return;
         }
 
+        //没有的话再请求网络
         imageView.setTag(url);
 
         mExecutorService.submit(new Runnable() {
@@ -49,6 +52,7 @@ public class ImageLoader {
         });
     }
 
+    //放入线程池中
     private Bitmap downloadImage(String imageUrl) {
         Bitmap bitmap = null;
         try {
@@ -63,5 +67,9 @@ public class ImageLoader {
             e.printStackTrace();
         }
         return bitmap;
+    }
+
+    public void setImageChche(ImageCache imageChche){
+        this.mImageChche = imageChche;
     }
 }
