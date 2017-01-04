@@ -2,7 +2,6 @@ package com.zuodong.androiddesignpatterns.Content.ChapterOne;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.util.LruCache;
 import android.widget.ImageView;
 
 import java.io.IOException;
@@ -20,28 +19,19 @@ import java.util.concurrent.Executors;
 
 public class ImageLoader {
 
-    LruCache<String,Bitmap> mImageChche;
+    ImageCache mImageChche = new ImageCache();
+
     ExecutorService mExecutorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
-    public ImageLoader() {
-        initImageCache();
-    }
-
-    private void initImageCache() {
-
-        int maxMemroy = (int) (Runtime.getRuntime().maxMemory() / 1024);
-
-        int cacheMemory = maxMemroy / 4;
-
-        mImageChche = new LruCache<String,Bitmap>(cacheMemory){
-            @Override
-            protected int sizeOf(String key, Bitmap bitmap) {
-                return bitmap.getRowBytes() * bitmap.getHeight() / 1024;
-            }
-        };
-    }
 
     public void displayimage(final String url,final ImageView imageView){
+
+        Bitmap bitmap = mImageChche.get(url);
+        if(bitmap != null){
+            imageView.setImageBitmap(bitmap);
+            return;
+        }
+
         imageView.setTag(url);
 
         mExecutorService.submit(new Runnable() {
