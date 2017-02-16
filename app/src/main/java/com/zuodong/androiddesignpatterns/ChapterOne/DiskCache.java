@@ -1,4 +1,4 @@
-package com.zuodong.androiddesignpatterns.Content.ChapterOne;
+package com.zuodong.androiddesignpatterns.ChapterOne;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

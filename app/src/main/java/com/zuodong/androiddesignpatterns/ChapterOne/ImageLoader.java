@@ -1,4 +1,4 @@
-package com.zuodong.androiddesignpatterns.Content.ChapterOne;
+package com.zuodong.androiddesignpatterns.ChapterOne;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -14,21 +14,52 @@ import java.util.concurrent.Executors;
 
 /**
  * Created by dongdong on 2016/12/31.
+ *
  * 单一职责
+ * 图片加载器
  */
 
 public class ImageLoader {
 
-    ImageCache mImageChche = new MemoryCache();
+    private ImageLoadConfig mConfig;
+
+    private static volatile ImageLoader imageLoader;
+
+    private ImageLoader(){
+        //初始化默认配置
+        mConfig = new ImageLoadConfig.Builder().create();
+    }
+
+    //单例模式
+    public static ImageLoader getInstance(){
+        if(imageLoader == null){
+            synchronized (ImageLoader.class){
+                if(imageLoader == null){
+                    imageLoader = new ImageLoader();
+                }
+            }
+        }
+        return imageLoader;
+    }
+
+    public void init(ImageLoadConfig config){
+        mConfig = config;
+        //检查配置合法性
+        checkConfig();
+    }
+
+    private void checkConfig() {
+
+    }
 
     //线程池
-    ExecutorService mExecutorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+    ExecutorService mExecutorService = Executors.newFixedThreadPool(mConfig.threadCount);
 
 
     public void displayimage(final String url,final ImageView imageView){
 
         //先从缓存中取
-        Bitmap bitmap = mImageChche.get(url);
+        Bitmap bitmap = mConfig.imageCache.get(url);
         if(bitmap != null){
             imageView.setImageBitmap(bitmap);
             return;
@@ -47,7 +78,7 @@ public class ImageLoader {
                 if(imageView.getTag().equals(url)){
                     imageView.setImageBitmap(bitmap);
                 }
-                mImageChche.put(url,bitmap);
+                mConfig.imageCache.put(url,bitmap);
             }
         });
     }
@@ -69,7 +100,4 @@ public class ImageLoader {
         return bitmap;
     }
 
-    public void setImageChche(ImageCache imageChche){
-        this.mImageChche = imageChche;
-    }
 }

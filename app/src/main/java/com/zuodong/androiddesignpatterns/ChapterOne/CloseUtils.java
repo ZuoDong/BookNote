@@ -1,4 +1,4 @@
-package com.zuodong.androiddesignpatterns.Content.ChapterOne;
+package com.zuodong.androiddesignpatterns.ChapterOne;
 
 import java.io.Closeable;
 import java.io.IOException;
