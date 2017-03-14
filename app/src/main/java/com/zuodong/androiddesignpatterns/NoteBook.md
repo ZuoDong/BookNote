@@ -17,3 +17,5 @@ Android中使用的并不多，使用抽象工厂来创建对象，实现了接�
 ## 11命令模式
 将一个请求封装成一个对象，从而让用户使用不同的请求把客户端参数化；对请求排队或者记录日志，以及支持可撤销的操作。
 PS:抽取代码封装，然后添加功能
+## 12观察者模式
+AndroidEventBus项目地址为:https://github.com/bboyfeiyu/AndroidEventBus
