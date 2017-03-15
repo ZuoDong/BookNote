@@ -12,6 +12,7 @@ Android中使用的并不多，使用抽象工厂来创建对象，实现了接�
 ## 8状态模式
 与策略模式基本相同，不同之处在于策略倾向于封装方法，而状态倾向于区分不同的对象。
 主要是用来减少if-else的使用
+实例:WIFI的状态，开机时，驱动未加载，驱动已加载
 ## 10解释器模式
 使用比较少，一般用于解释文法规则，构建抽象语法树，了解即可。
 ## 11命令模式
@@ -19,3 +20,7 @@ Android中使用的并不多，使用抽象工厂来创建对象，实现了接�
 PS:抽取代码封装，然后添加功能
 ## 12观察者模式
 AndroidEventBus项目地址为:https://github.com/bboyfeiyu/AndroidEventBus
+实例：BroadcastReciver用来接收消息
+## 13备忘录模式
+在不破坏封装的条件下，通过备忘录对象存储另外一个对象内部的状态快照，在合适的时候还原状态
+实例: onSaveInstanceState和onRestoreInstanceState

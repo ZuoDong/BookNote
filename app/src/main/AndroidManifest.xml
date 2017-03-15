@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChapterEleven.DrawActivity"></activity>
+        <activity android:name=".ChapterEleven.DrawActivity" />
+        <activity android:name=".ChapterThirteen.MemotoActivity"></activity>
     </application>
 
 </manifest>
