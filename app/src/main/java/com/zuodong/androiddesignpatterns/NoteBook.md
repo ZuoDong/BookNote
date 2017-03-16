@@ -24,3 +24,6 @@ AndroidEventBus项目地址为:https://github.com/bboyfeiyu/AndroidEventBus
 ## 13备忘录模式
 在不破坏封装的条件下，通过备忘录对象存储另外一个对象内部的状态快照，在合适的时候还原状态
 实例: onSaveInstanceState和onRestoreInstanceState
+## 14迭代器模式
+提供一种方法顺序访问一个容器对象中的各个元素，有不需要暴漏该对象的内部表示。（实际使用不多）
+实例：iterator,Cursor等等
