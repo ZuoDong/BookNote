@@ -27,3 +27,9 @@ AndroidEventBus项目地址为:https://github.com/bboyfeiyu/AndroidEventBus
 ## 14迭代器模式
 提供一种方法顺序访问一个容器对象中的各个元素，有不需要暴漏该对象的内部表示。（实际使用不多）
 实例：iterator,Cursor等等
+## 15模板方法模式
+模板方法中父类定义步骤逻辑，抽取公共方法，子类实现相关细节。代码中的重构。
+实例: AsyncTask的步骤（execute-->onPreExecute-->doInBackground-->onPostExecute）
+Activity的执行步骤（ActivityThread.main-->Activity.onCreate-->Activity.onStart-->Activity.onResume）
+复习：Page-296ImageLoader升级
+
