@@ -32,4 +32,8 @@ AndroidEventBus项目地址为:https://github.com/bboyfeiyu/AndroidEventBus
 实例: AsyncTask的步骤（execute-->onPreExecute-->doInBackground-->onPostExecute）
 Activity的执行步骤（ActivityThread.main-->Activity.onCreate-->Activity.onStart-->Activity.onResume）
 复习：Page-296ImageLoader升级
+# 16访问者模式
+访问者模式使用的频率不高，用于对象结构比较稳定，对同一对象进行不同操作的情况
+实例：编译时注解(APT)使用实例，ButterKnife，Dagger,Retrofit;作者的项目SimpleDagger:
+     https://github.com/bboyfeiyu/InjectDagger
 
