@@ -36,4 +36,6 @@ Activity的执行步骤（ActivityThread.main-->Activity.onCreate-->Activity.onS
 访问者模式使用的频率不高，用于对象结构比较稳定，对同一对象进行不同操作的情况
 实例：编译时注解(APT)使用实例，ButterKnife，Dagger,Retrofit;作者的项目SimpleDagger:
      https://github.com/bboyfeiyu/InjectDagger
-
+## 18代理模式
+实质就是控制对象的访问。可分为：远程代理；虚拟代理；保护代理；智能引用
+实例：AIDL以及Binder机制的讲解，Page351 通知栏实战
