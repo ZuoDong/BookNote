@@ -48,3 +48,7 @@ page375：ListView解析 page380:RecyclerView解析
 ## 21装饰者模式
 动态的给给对象添加一些额外的功能。注意和代理模式进行区别：是否进行功能的增强
 实例：Context和ContextImpl和ContextWrapper的关系
+## 22享元模式
+使用缓存存储对象。使用场景：1.系统中存在大量相似的对象2.内部状态与环境无关的对象3.需要缓冲池
+实例：Message的使用其实是用一个链表来维护的
+拓展：深入Android消息机制
