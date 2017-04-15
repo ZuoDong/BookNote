@@ -34,7 +34,7 @@ Activity的执行步骤（ActivityThread.main-->Activity.onCreate-->Activity.onS
 复习：Page-296ImageLoader升级
 # 16访问者模式
 访问者模式使用的频率不高，用于对象结构比较稳定，对同一对象进行不同操作的情况
-实例：编译时注解(APT)使用实例，ButterKnife，Dagger,Retrofit;作者的项目SimpleDagger:
+实例：编译时注解(APT)使用实例，ButterKnife，Dagger,R密码etrofit;作者的项目SimpleDagger:
      https://github.com/bboyfeiyu/InjectDagger
 ## 18代理模式
 实质就是控制对象的访问。可分为：远程代理；虚拟代理；保护代理；智能引用
@@ -52,3 +52,7 @@ page375：ListView解析 page380:RecyclerView解析
 使用缓存存储对象。使用场景：1.系统中存在大量相似的对象2.内部状态与环境无关的对象3.需要缓冲池
 实例：Message的使用其实是用一个链表来维护的
 拓展：深入Android消息机制
+# 23外观模式
+为复杂子系统提供一个统一接口，用于与外部交互,各种SDK的实现都会用到
+实例：ContextImpl封装了系统的服务，用户只需要和context接口进行打交道
+拓展：Android资源的加载与配置
