@@ -59,3 +59,5 @@ page375：ListView解析 page380:RecyclerView解析
 # 24桥接模式
 将抽象部分与实现部分分离，使他们都可以独立的进行变化。
 实例：Window与WindowManger，WindowManger里面有个Window实例
+# 25MVP架构模式
+将view层和控制层解耦，达到更高的扩展性

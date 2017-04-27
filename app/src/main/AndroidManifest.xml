@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChapterEleven.DrawActivity" />
-        <activity android:name=".ChapterThirteen.MemotoActivity"></activity>
+        <activity android:name=".ChapterThirteen.MemotoActivity" />
+        <activity android:name=".ChapterTentySix.MVPBaseActivity"></activity>
     </application>
 
 </manifest>
