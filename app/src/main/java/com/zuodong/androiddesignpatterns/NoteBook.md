@@ -45,7 +45,7 @@ Activity的执行步骤（ActivityThread.main-->Activity.onCreate-->Activity.onS
 实例：View和ViewGroup就是安全组合模式
 ## 20适配器模式
 page375：ListView解析 page380:RecyclerView解析
-## 21装饰者模式
+## 21装饰者模式‘
 动态的给给对象添加一些额外的功能。注意和代理模式进行区别：是否进行功能的增强
 实例：Context和ContextImpl和ContextWrapper的关系
 ## 22享元模式
@@ -55,4 +55,7 @@ page375：ListView解析 page380:RecyclerView解析
 # 23外观模式
 为复杂子系统提供一个统一接口，用于与外部交互,各种SDK的实现都会用到
 实例：ContextImpl封装了系统的服务，用户只需要和context接口进行打交道
-拓展：Android资源的加载与配置
+拓展：Android资源的加载与配置(插件模式详见:https://github.com/singwhatiwanna/dynamic-load-apk)
+# 24桥接模式
+将抽象部分与实现部分分离，使他们都可以独立的进行变化。
+实例：Window与WindowManger，WindowManger里面有个Window实例
