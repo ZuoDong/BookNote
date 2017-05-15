@@ -1,0 +1,2 @@
+## OpenglES的helloword
+1.OpenGL ES应用的起始点是从类GLSurfaceView开始，设置GLSurfaceView只需调用一个方法来设置OpenGLView用到的GLSurfaceView.Renderer.
