@@ -8,7 +8,7 @@ import javax.microedition.khronos.opengles.GL10;
 public class OpenGLRenderer implements GLSurfaceView.Renderer {
 
 
- private Square square;
+ private SmoothColoredSquare square;
  private float angle = 20f;
 
  public void onDrawFrame(GL10 gl) {
@@ -94,7 +94,7 @@ public class OpenGLRenderer implements GLSurfaceView.Renderer {
           GL10.GL_NICEST);
 
   // Initialize our square.
-  square = new Square();
+  square = new SmoothColoredSquare();
  }
 
  public void onSurfaceChanged(GL10 gl, int width, int height) {
