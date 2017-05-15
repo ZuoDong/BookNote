@@ -24,3 +24,4 @@ gl.glPopMatrix(); //Matrix出栈
 ## 添加颜色
 OpenGL ES使用颜色是我们熟知的RGBA模式（红，绿，蓝，透明度）
 0为0，1相当于255（0xFF)
+## 3D模型
