@@ -8,10 +8,18 @@ import javax.microedition.khronos.opengles.GL10;
 public class OpenGLRenderer implements GLSurfaceView.Renderer {
 
 
+ private Square square;
+
  public void onDrawFrame(GL10 gl) {
  // Clears the screen and depth buffer. 清理屏幕和缓冲
  gl.glClear(GL10.GL_COLOR_BUFFER_BIT | // OpenGL docs.
  GL10.GL_DEPTH_BUFFER_BIT);
+
+  gl.glLoadIdentity(); // Replace the current matrix with the identity matrix
+  gl.glTranslatef(0, 0, -4); // Translates 4 units into the screen.
+  // Draw our square.
+  square.draw(gl); // ( NEW )
+
  }
 
 
@@ -30,6 +38,9 @@ public class OpenGLRenderer implements GLSurfaceView.Renderer {
   // Really nice perspective calculations.
   gl.glHint(GL10.GL_PERSPECTIVE_CORRECTION_HINT, // OpenGL docs.
           GL10.GL_NICEST);
+
+  // Initialize our square.
+  square = new Square();
  }
 
  public void onSurfaceChanged(GL10 gl, int width, int height) {
