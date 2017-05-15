@@ -52,6 +52,7 @@ public class Square {
  * @param gl
   *
   * cull剔除，不去渲染看不见的地方
+  * 要使用gl的某些功能，需要打开管道pipe
  */
  public void draw(GL10 gl) {
  // Counter-clockwise winding.
