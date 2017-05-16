@@ -1,12 +1,16 @@
-package com.administrator.opengles;
+package com.administrator.opengles.activity;
 
+import android.graphics.BitmapFactory;
 import android.opengl.GLSurfaceView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class MainActivity extends AppCompatActivity {
+import com.administrator.opengles.OpenGLRenderer;
+import com.administrator.opengles.mode.SimplePlane;
+
+public class OpenGlSquareActivity extends AppCompatActivity {
 
     // Called when the activity is first created.
     @Override
@@ -17,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); // (NEW)
 
         GLSurfaceView view = new GLSurfaceView(this);
-        view.setRenderer(new OpenGLRenderer());
+        OpenGLRenderer renderer = new OpenGLRenderer();
+        view.setRenderer(renderer);
         setContentView(view);
+
     }
 }
