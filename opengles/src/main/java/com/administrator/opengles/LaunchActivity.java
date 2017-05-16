@@ -1,4 +1,4 @@
-package com.administrator.opengles.activity;
+package com.administrator.opengles;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.administrator.opengles.R;
+import com.administrator.opengles.activity.OpenGlSquareActivity;
+import com.administrator.opengles.activity.RendererActivity;
+import com.administrator.opengles.drawPoint.PointActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +32,7 @@ public class LaunchActivity extends AppCompatActivity {
         modedds = new ArrayList<>();
         modedds.add(new Modedd("旋转方块",OpenGlSquareActivity.class));
         modedds.add(new Modedd("材质渲染",RendererActivity.class));
+        modedds.add(new Modedd("画点",PointActivity.class));
 
         List<String> strings = new ArrayList<>();
         for (int i = 0; i < modedds.size(); i++) {
