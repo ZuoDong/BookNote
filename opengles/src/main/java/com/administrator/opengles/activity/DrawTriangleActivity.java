@@ -40,7 +40,7 @@ public class DrawTriangleActivity extends OpenGLESActivity implements IOpenGLDem
         vertex.put(vertexArray);
         vertex.position(0);
 
-        gl.glLoadIdentity(); //重置Matrix
+        gl.glLoadIdentity(); //设置为单位Matrix
         gl.glTranslatef(0,0,-4); //设置纵深
 
         gl.glEnableClientState(GL10.GL_VERTEX_ARRAY); //打开管道

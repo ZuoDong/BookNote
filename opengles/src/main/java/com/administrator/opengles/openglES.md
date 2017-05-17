@@ -25,3 +25,34 @@ gl.glPopMatrix(); //Matrix出栈
 OpenGL ES使用颜色是我们熟知的RGBA模式（红，绿，蓝，透明度）
 0为0，1相当于255（0xFF)
 ## 3D模型
+## 三维坐标系
+Object Coordinate System: 也称作Local coordinate System，用来定义一个模型本身的坐标系。
+World Coordinate System: 3d 虚拟世界中的绝对坐标系，定义好这个坐标系的原点就可以用来描述模型的实现的位置，Camera 的位置，光源的位置。
+View Coordinate System: 一般使用用来计算光照效果。
+Clip Coordinate System:  对3D场景使用投影变换裁剪视锥。
+Normalized device coordinate System (NDC): 规范后坐标系。
+Windows Coordinate System: 最后屏幕显示的2D坐标系统，一般原点定义在屏幕左上角。
+## 矩阵变换指令
+将当前矩阵设为单位矩阵的指令 为glLoadIdentity().
+矩阵相乘的指令glMultMatrix*() 允许指定任意矩阵和当前矩阵相乘。
+选择当前矩阵种类glMatrixMode().  OpenGL ES 可以运行指定GL_PROJECTION，GL_MODELVIEW等坐标系，后续的矩阵操作将针对选定的坐标。
+将当前矩阵设置成任意指定矩阵glLoadMatrix*()
+在栈中保存当前矩阵和从栈中恢复所存矩阵，可以使用glPushMatrix()和glPopMatrix()
+特定的矩阵变换平移glTranslatef(),旋转glRotatef() 和缩放glScalef()
+## 投影变换
+gl.glMatrixMode(GL_PROJECTION);
+gl.glLoadIdentity();
+
+openglES 定义的函数为锥形投影：glFrustum()
+
+android中的调用更加简单：
+public static void gluPerspective(GL10 gl, float fovy, float aspect, float zNear, float zFar)
+
+fovy: 定义视锥的view angle.
+aspect:  定义视锥的宽高比。
+zNear: 定义裁剪面的近距离。
+zFar: 定义创建面的远距离。
+正侧投影：glOrthof()
+## viewport变换
+glViewport(int x, int y, int width, int height)
+相当于设置相框的大小，而gluPerspective相当于照片大小，不合适可能会被拉伸
