@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.administrator.opengles.activity.DrawLineActivity;
+import com.administrator.opengles.activity.DrawTriangleActivity;
 import com.administrator.opengles.activity.OpenGlSquareActivity;
 import com.administrator.opengles.activity.RendererActivity;
 import com.administrator.opengles.activity.PointActivity;
@@ -35,6 +36,7 @@ public class LaunchActivity extends AppCompatActivity {
         modedds.add(new Modedd("材质渲染",RendererActivity.class));
         modedds.add(new Modedd("画点",PointActivity.class));
         modedds.add(new Modedd("画线",DrawLineActivity.class));
+        modedds.add(new Modedd("画三角形",DrawTriangleActivity.class));
 
         List<String> strings = new ArrayList<>();
         for (int i = 0; i < modedds.size(); i++) {
