@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".activity.OpenGlSquareActivity" />
         <activity android:name=".activity.RendererActivity" />
-        <activity android:name=".drawPoint.PointActivity"></activity>
+        <activity android:name=".activity.PointActivity" />
+        <activity android:name=".activity.DrawLineActivity"></activity>
     </application>
 
 </manifest>

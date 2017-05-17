@@ -1,7 +1,10 @@
-package com.administrator.opengles.drawPoint;
+package com.administrator.opengles.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.administrator.opengles.drawPoint.IOpenGLDemo;
+import com.administrator.opengles.drawPoint.OpenGLESActivity;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -9,7 +12,7 @@ import java.nio.FloatBuffer;
 
 import javax.microedition.khronos.opengles.GL10;
 
-public class PointActivity extends OpenGLESActivity implements IOpenGLDemo{
+public class PointActivity extends OpenGLESActivity implements IOpenGLDemo {
 
     float[] vertexArray = new float[]{
             -0.8f , -0.4f * 1.732f , 0.0f ,
