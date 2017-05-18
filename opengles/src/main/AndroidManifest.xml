@@ -22,6 +22,7 @@
         <activity android:name=".activity.DrawLineActivity" />
         <activity android:name=".activity.DrawIcosahedronActivity" />
         <activity android:name=".SolarSystem.SolarSystemActivity"></activity>
+        <activity android:name=".activity.DrawSphere" />
     </application>
 
 </manifest>
