@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.administrator.opengles.SolarSystem.SolarSystemActivity;
 import com.administrator.opengles.activity.DrawIcosahedronActivity;
 import com.administrator.opengles.activity.DrawLineActivity;
 import com.administrator.opengles.activity.DrawTriangleActivity;
@@ -39,6 +40,7 @@ public class LaunchActivity extends AppCompatActivity {
         modedds.add(new Modedd("画线",DrawLineActivity.class));
         modedds.add(new Modedd("画三角形",DrawTriangleActivity.class));
         modedds.add(new Modedd("画多边形", DrawIcosahedronActivity.class));
+        modedds.add(new Modedd("画星系图", SolarSystemActivity.class));
 
         List<String> strings = new ArrayList<>();
         for (int i = 0; i < modedds.size(); i++) {
