@@ -16,6 +16,7 @@ import com.administrator.opengles.activity.DrawTriangleActivity;
 import com.administrator.opengles.activity.OpenGlSquareActivity;
 import com.administrator.opengles.activity.RendererActivity;
 import com.administrator.opengles.activity.PointActivity;
+import com.administrator.opengles.earth.TutorialPartI;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +44,7 @@ public class LaunchActivity extends AppCompatActivity {
         modedds.add(new Modedd("画多边形", DrawIcosahedronActivity.class));
         modedds.add(new Modedd("画星系图", SolarSystemActivity.class));
         modedds.add(new Modedd("画球体", DrawSphere.class));
+        modedds.add(new Modedd("地球仪",TutorialPartI.class));
 
         List<String> strings = new ArrayList<>();
         for (int i = 0; i < modedds.size(); i++) {

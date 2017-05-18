@@ -68,3 +68,7 @@ gl.Clear(GL10.GL_DEPTH_BUFFER_BIT) 清空Depth Buffer (赋值为1.0)通常清空
 gl.glClearDepthf(float depth) 指定清空Depth Buffer是使用的值，缺省为1.0，通常无需改变这个值，
 gl.glEnable(GL10.GL_DEPTH_TEST) 打开depth Test
 gl.glDisable(GL10.GL_DEPTH_TEST) 关闭depth Test
+
+## 光照模型
+OpenGL 光照模型中定义的光源可以分别控制，打开或关闭，OpenGL ES支持最多八个光源。
+OpenGL 光照模型中最终的光照效果可以分为四个组成部分：Emitted(光源）, ambient(环境光）,diffuse(漫射光）和specular（镜面反射光），最终结果由这四种光叠加而成。

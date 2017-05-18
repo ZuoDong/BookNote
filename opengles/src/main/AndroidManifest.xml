@@ -21,8 +21,10 @@
         <activity android:name=".activity.DrawTriangleActivity" />
         <activity android:name=".activity.DrawLineActivity" />
         <activity android:name=".activity.DrawIcosahedronActivity" />
-        <activity android:name=".SolarSystem.SolarSystemActivity"></activity>
+        <activity android:name=".SolarSystem.SolarSystemActivity" />
         <activity android:name=".activity.DrawSphere" />
+        <activity android:name=".earth.EOpenglESActivity"></activity>
+        <activity android:name=".earth.TutorialPartI" />
     </application>
 
 </manifest>
