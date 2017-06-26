@@ -54,7 +54,7 @@ public class TutorialPartI extends EOpenglESActivity implements IEOpenGLDemo {
     private OnTouchListener onTouchListener = new OnTouchListener() {
         float lastX, lastY;
 
-        private int mode = 0; // ���ص�ĸ���
+        private int mode = 0; // 触控点的个数
 
         float oldDist = 0;
 
