@@ -1,1 +1,1 @@
-include ':designPattern', ':opengles'
+include ':designPattern', ':opengles', ':opengles20'
